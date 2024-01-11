@@ -2,16 +2,16 @@ d = {}
 sent = input("Please enter a sentence: ")
 i = 0
 j = 0
+length = len(sent)
 
-print(len(sent))
-while i < len(sent):
+while i < length:
     j = i
-    print(j)
     while sent[j] != " ":
         j += 1
+        if j >= length: break
+
     word = sent[i:j]
-    # print(word)
-    # print(len(word))
+    
     if word in d:
         d[word] += 1
     else:
